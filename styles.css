@@ -42,16 +42,48 @@ nav a {
     text-decoration: none;
 }
 
-footer {
+main {
     margin-top: 20px;
-    text-align: center;
 }
 
-.social-links a {
-    display: inline-block;
-    margin: 0 10px;
+.server-status {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #004d00;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.server-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.server-info img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.status-indicator {
+    font-weight: bold;
+}
+
+.online {
     color: #00A300;
-    text-decoration: none;
+}
+
+.offline {
+    color: #FF0000;
+}
+
+.error {
+    color: #FF8800;
+}
+
+.online-count {
+    font-weight: bold;
 }
 
 /* ... Other styles ... */
