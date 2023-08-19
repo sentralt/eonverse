@@ -6,89 +6,21 @@
     <link rel="stylesheet" href="styles.css">
     <title>EonVerse CLUB Forum</title>
     <style>
-        body {
-            background-image: url('https://cdn.discordapp.com/attachments/1130798715335081994/1142592090199568487/image.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            position: relative;
-        }
+        /* Your existing styles */
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-            z-index: 1;
-        }
-
-        header {
+        /* Add styles for the glowing effect */
+        .announcement-button {
+            display: inline-block;
+            padding: 10px 20px;
             background-color: #4CAF50;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav li {
-            margin: 0 10px;
-        }
-
-        nav a {
-            color: #ddd;
+            color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #fff;
-        }
-
-        footer {
-            background-color: #4CAF50;
-            color: #ddd;
-            text-align: center;
-            padding: 10px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-
-        footer .social-links a {
-            color: #ddd;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        /* Add a glow effect to the iframe */
-        iframe {
-            border: none;
-            box-shadow: 0 0 20px rgba(0, 0, 255, 1);
+            border-radius: 5px;
             transition: box-shadow 0.3s ease;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 250px;
-            height: auto;
-            z-index: 0;
         }
 
-        /* Apply the glow effect on hover */
-        iframe:hover {
-            box-shadow: 0 0 30px rgba(0, 0, 255, 1);
+        .announcement-button:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
         }
     </style>
 </head>
@@ -100,9 +32,11 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Forums</a></li>
-                <li><a href="#">Announcements</a></li>
+                <li><a href="announcements.html" class="announcement-button">Announcements</a></li>
                 <li><a href="#">Store</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
             </ul>
         </nav>
     </header>
@@ -123,7 +57,7 @@
 
     <!-- Live server info -->
     <div class="server-status">
-        <iframe src="server-widget.html" frameborder="0"></iframe>
+        <iframe src="https://api.mcsrvstat.us/2/eonverse.club" frameborder="0"></iframe>
     </div>
 
     <footer>
