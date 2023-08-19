@@ -69,6 +69,42 @@
             text-decoration: none;
             margin: 0 10px;
         }
+
+        /* Add a glow effect to the iframe */
+        iframe {
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Green glow effect */
+            transition: box-shadow 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Apply the glow effect on hover */
+        iframe:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 0, 1); /* Brighter green glow on hover */
+        }
+
+        /* Style for the button */
+        iframe::before {
+            content: "Join today!";
+            display: block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            margin: 10px auto;
+            width: 100px;
+            transition: background-color 0.3s ease;
+        }
+
+        iframe::before:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -96,8 +132,8 @@
         </section>
     </main>
 
-    <!-- Replace this section with the Discord widget iframe code -->
-    <iframe src="https://discord.com/widget?id=1141095181886697673&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+    <iframe src="https://discord.com/widget?id=1141038057647243275&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+
     <footer>
         <div class="social-links">
             <a href="https://discord.gg/VN7HXUYBHX" target="_blank">Discord</a>
