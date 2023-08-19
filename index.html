@@ -4,50 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>EonVerse CLUB Forum</title>
+    <title>Register - EonVerse CLUB</title>
     <style>
         /* Your existing styles */
+
+        .registration-form {
+            background-image: url('https://cdn.discordapp.com/attachments/1130798715335081994/1141066849782607892/EonVerse.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: white;
+            text-align: center;
+        }
+
+        .registration-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .registration-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .registration-form input[type="text"],
+        .registration-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .registration-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .registration-form button:hover {
+            background-color: #45a049;
+        }
     </style>
+    <script>
+        // JavaScript validation function
+    </script>
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>EonVerse CLUB</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Forums</a></li>
-                <li><a href="announcements.html">Announcements</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-            </ul>
-        </nav>
+        <!-- Your header content -->
     </header>
 
     <main>
-        <section class="info">
-            <h2>Welcome to EonVerse CLUB!</h2>
-            <p>We're a community of Minecraft enthusiasts...</p>
-        </section>
+        <section class="registration-form">
+            <h2>Register for EonVerse CLUB</h2>
+            <form action="your-server-endpoint" method="post" onsubmit="return validateForm()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
 
-        <section class="threads">
-            <!-- List of threads -->
-        </section>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
 
-        <section class="thread-details">
-            <!-- Individual thread details and posts -->
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirmPassword" required>
+
+                <button type="submit">Register</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <div class="social-links">
-            <a href="https://discord.gg/VN7HXUYBHX" target="_blank">Discord</a>
-            <a href="mailto:extrasentralt@gmail.com">Email</a>
-            <a href="https://www.youtube.com/@sentralt" target="_blank">YouTube</a>
-        </div>
-        <p>&copy; 2023 EonVerse CLUB</p>
+        <!-- Your footer content -->
     </footer>
 </div>
 
