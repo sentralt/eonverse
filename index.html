@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>EonVerse CLUB</title>
+    <title>EonVerse CLUB Forum</title>
     <style>
         body {
             background-image: url('https://cdn.discordapp.com/attachments/1130798715335081994/1142592090199568487/image.png');
@@ -13,18 +13,18 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            position: relative; /* Add this for positioning */
+            position: relative;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent black background */
+            background-color: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            position: relative; /* Add this for positioning */
-            z-index: 1; /* Ensure the container is above the widget */
+            position: relative;
+            z-index: 1;
         }
 
         header {
@@ -76,19 +76,19 @@
         /* Add a glow effect to the iframe */
         iframe {
             border: none;
-            box-shadow: 0 0 20px rgba(0, 0, 255, 1); /* Stronger blue glow effect */
+            box-shadow: 0 0 20px rgba(0, 0, 255, 1);
             transition: box-shadow 0.3s ease;
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 250px; /* Adjust the width as needed */
+            width: 250px;
             height: auto;
-            z-index: 0; /* Place the widget behind the container */
+            z-index: 0;
         }
 
         /* Apply the glow effect on hover */
         iframe:hover {
-            box-shadow: 0 0 30px rgba(0, 0, 255, 1); /* Stronger blue glow on hover */
+            box-shadow: 0 0 30px rgba(0, 0, 255, 1);
         }
     </style>
 </head>
@@ -108,6 +108,10 @@
     </header>
 
     <main>
+        <section class="info">
+            <h2>Welcome to EonVerse CLUB!</h2>
+        </section>
+
         <section class="threads">
             <!-- List of threads -->
         </section>
@@ -116,6 +120,17 @@
             <!-- Individual thread details and posts -->
         </section>
     </main>
+
+    <!-- Live server info -->
+    <div class="server-status">
+        <div class="server-info">
+            <div class="status-details">
+                <p class="server-name">EonVerse Minecraft Server</p>
+                <p class="status-text">Players Online: <span class="online-count">Loading...</span></p>
+                <p class="server-ip">Server IP: <span class="ip-address">eonverse.club</span></p>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="social-links">
@@ -127,9 +142,26 @@
     </footer>
 </div>
 
-<iframe src="https://discord.com/widget?id=1141038057647243275&theme=dark&channel_ids=1141038057647243275" allowtransparency="true" frameborder="0"></iframe>
-
+<!-- Your scripts -->
 <script src="scripts.js"></script>
-<script src="server-status.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const ip = "eonverse.club"; // Your server's IP
+
+        fetch(`https://api.mcsrvstat.us/2/${ip}`)
+            .then(response => response.json())
+            .then(data => {
+                const onlineCount = data.players.online || 0;
+                const ipElement = document.querySelector(".ip-address");
+                const onlineCountElement = document.querySelector(".online-count");
+
+                ipElement.textContent = ip;
+                onlineCountElement.textContent = onlineCount;
+            })
+            .catch(error => {
+                console.error("Error fetching server information:", error);
+            });
+    });
+</script>
 </body>
 </html>
