@@ -1,0 +1,18 @@
+/* registration-styles.css */
+
+.registration-form {
+    background-image: url('https://cdn.discordapp.com/attachments/1130798715335081994/1141066849782607892/EonVerse.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+}
+
+.registration-form h2 {
+    margin-bottom: 20px;
+}
+
+/* Rest of your registration-specific styles */
