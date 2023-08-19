@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>EonVerse CLUB Forum</title>
+    <title>EonVerse CLUB</title>
     <style>
         body {
             background-image: url('https://cdn.discordapp.com/attachments/1130798715335081994/1142592090199568487/image.png');
@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            position: relative; /* Add this for positioning */
         }
 
         .container {
@@ -22,6 +23,8 @@
             background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent black background */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative; /* Add this for positioning */
+            z-index: 1; /* Ensure the container is above the widget */
         }
 
         header {
@@ -73,37 +76,19 @@
         /* Add a glow effect to the iframe */
         iframe {
             border: none;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Green glow effect */
+            box-shadow: 0 0 20px rgba(0, 0, 255, 1); /* Stronger blue glow effect */
             transition: box-shadow 0.3s ease;
-            display: block;
-            margin: 20px auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 250px; /* Adjust the width as needed */
+            height: auto;
+            z-index: 0; /* Place the widget behind the container */
         }
 
         /* Apply the glow effect on hover */
         iframe:hover {
-            box-shadow: 0 0 20px rgba(0, 255, 0, 1); /* Brighter green glow on hover */
-        }
-
-        /* Style for the button */
-        iframe::before {
-            content: "Join today!";
-            display: block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            margin: 10px auto;
-            width: 100px;
-            transition: background-color 0.3s ease;
-        }
-
-        iframe::before:hover {
-            background-color: #45a049;
+            box-shadow: 0 0 30px rgba(0, 0, 255, 1); /* Stronger blue glow on hover */
         }
     </style>
 </head>
@@ -132,8 +117,6 @@
         </section>
     </main>
 
-    <iframe src="https://discord.com/widget?id=1141038057647243275&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-
     <footer>
         <div class="social-links">
             <a href="https://discord.gg/VN7HXUYBHX" target="_blank">Discord</a>
@@ -143,6 +126,8 @@
         <p>&copy; 2023 EonVerse CLUB</p>
     </footer>
 </div>
+
+<iframe src="https://discord.com/widget?id=1141038057647243275&theme=dark&channel_ids=1141038057647243275" allowtransparency="true" frameborder="0"></iframe>
 
 <script src="scripts.js"></script>
 <script src="server-status.js"></script>
