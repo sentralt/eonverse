@@ -1,57 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>EonVerse CLUB Forum</title>
-</head>
-<body>
-<div class="container">
-    <header>
-        <h1>EonVerse CLUB</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Forums</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
 
-    <main>
-        <section class="threads">
-            <!-- List of threads -->
-        </section>
+/* Global Styles */
+body {
+    background-image: url('https://cdn.discordapp.com/attachments/1130798715335081994/1142592090199568487/image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
-        <section class="thread-details">
-            <!-- Individual thread details and posts -->
-        </section>
-    </main>
 
-    <div class="server-status">
-        <div class="server-info">
-            <div class="status-details">
-                <p class="server-name">EonVerse Server</p>
-                <p class="status-text">Server Status: <span class="status-indicator">Loading...</span></p>
-                <p class="player-count">Players Online: <span class="online-count">Loading...</span></p>
-            </div>
-        </div>
+.container {
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+}
+
+header {
+    background-color: #004d00;
+    padding: 20px;
+    text-align: center;
+    color: #00A300;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.server-status {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #004d00;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.server-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.server-info img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.status-indicator {
+    font-weight: bold;
+}
+
+.online {
+    color: #00A300;
+}
+
+.offline {
+    color: #FF0000;
+}
+
+.error {
+    color: #FF8800;
+}
+
+.online-count {
+    font-weight: bold;
+}
+<div class="popup-overlay">
+    <div class="popup">
+        <h2>Latest Announcements</h2>
+        <!-- Content of the popup here -->
+        <button class="close-popup">Close</button>
     </div>
-
-    <footer>
-        <div class="social-links">
-            <a href="https://discord.gg/VN7HXUYBHX" target="_blank">Discord</a>
-            <a href="mailto:extrasentralt@gmail.com">Email</a>
-            <a href="https://www.youtube.com/@sentralt" target="_blank">YouTube</a>
-        </div>
-        <p>&copy; 2023 EonVerse CLUB</p>
-    </footer>
 </div>
-
-<script src="scripts.js"></script>
-<script src="server-status.js"></script>
-</body>
-</html>
+/* ... Other styles ... */
