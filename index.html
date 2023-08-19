@@ -7,33 +7,48 @@
     <title>EonVerse CLUB Forum</title>
     <style>
         /* Your existing styles */
-
-        /* Adjust styles for the live server widget */
-        .server-status {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            width: 150px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-            z-index: 2;
-        }
-
-        iframe {
-            width: 100%;
-            height: auto;
-        }
     </style>
 </head>
 <body>
 <div class="container">
-    <!-- Your header, main content, and footer sections -->
+    <header>
+        <h1>EonVerse CLUB</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Forums</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Live server info -->
-    <div class="server-status">
-        <iframe src="https://api.mcsrv.org/v2/eonverse.club/query/info" frameborder="0"></iframe>
-    </div>
+    <main>
+        <section class="info">
+            <h2>Welcome to EonVerse CLUB!</h2>
+            <p>We're a community of Minecraft enthusiasts...</p>
+        </section>
+
+        <section class="threads">
+            <!-- List of threads -->
+        </section>
+
+        <section class="thread-details">
+            <!-- Individual thread details and posts -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://discord.gg/VN7HXUYBHX" target="_blank">Discord</a>
+            <a href="mailto:extrasentralt@gmail.com">Email</a>
+            <a href="https://www.youtube.com/@sentralt" target="_blank">YouTube</a>
+        </div>
+        <p>&copy; 2023 EonVerse CLUB</p>
+    </footer>
 </div>
 
 <!-- Your scripts -->
