@@ -7,6 +7,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     color: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-image {
+    max-width: 150px;
+    margin-bottom: 20px;
 }
 
 .registration-form h2 {
