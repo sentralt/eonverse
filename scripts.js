@@ -1,12 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const announcementLink = document.querySelector("nav ul li:nth-child(3) a");
+document.addEventListener("DOMContentLoaded", function () {
+    const ip = "eonverse.club"; // Your server's IP
 
-    // Replace with your channel and server IDs
-    const channelId = "1141095181886697673";
-    const serverId = "1141038057647243275";
+    fetch(`https://api.mcsrvstat.us/2/${ip}`)
+        .then(response => response.json())
+        .then(data => {
+            const onlineCount = data.players.online || 0;
+            const ipElement = document.querySelector(".ip-address");
+            const onlineCountElement = document.querySelector(".online-count");
 
-    announcementLink.addEventListener("click", function(event) {
-        event.preventDefault();
-        window.location.href = `https://discord.com/channels/${serverId}/${channelId}`;
-    });
+            ipElement.textContent = ip;
+            onlineCountElement.textContent = onlineCount;
+        })
+        .catch(error => {
+            console.error("Error fetching server information:", error);
+        });
 });
