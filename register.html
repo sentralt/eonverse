@@ -3,42 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="registration-styles.css"> <!-- External CSS for registration styling -->
-    <title>Register - EonVerse CLUB</title>
+    <title>EonVerse Offical Site - Register</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <header>
-        <!-- Your header content -->
-    </header>
-
-    <main>
-        <section class="registration-form">
-            <img src="https://cdn.discordapp.com/attachments/1130798715335081994/1141066849782607892/EonVerse.jpg" alt="EonVerse Logo" class="logo-image">
-            <h2>Join EonVerse CLUB</h2>
-            <form action="your-server-endpoint" method="post" onsubmit="return validateForm()">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirmPassword" required>
-
-                <button type="submit" class="register-button">Register</button>
-            </form>
-            <p class="back-link">Already have an account? <a href="login.html">Log in</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <!-- Your footer content -->
-    </footer>
-</div>
-
-<!-- Your scripts -->
-<script src="scripts.js"></script>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="/register" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login here</a></p>
+    </div>
 </body>
 </html>
