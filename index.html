@@ -1,96 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>EonVerse CLUB</title>
-    <style>
-        /* Your existing styles */
-        /* Additional styling for the improved layout */
-        body {
-            /* Your existing body styles */
-            background-image: url('background-image.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        .feature-box {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 20px;
-        }
-
-        .glow-text {
-            font-weight: bold;
-            font-size: 24px;
-            text-align: center;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-        }
-
-        .discord-button {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            padding: 10px 20px;
-            background-color: transparent;
-            color: white;
-            border: 2px solid white;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .discord-button:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-    </style>
+    <!-- Your script imports, title, and metadata here -->
 </head>
 <body>
-<div class="container">
-    <header>
-        <!-- Your header content -->
-    </header>
-
-    <main>
-        <section class="features-container">
-            <div class="feature-box">
-                <p class="glow-text">Engaging Gameplay</p>
-                <p>Experience thrilling gameplay that keeps you hooked!</p>
+    <nav class="navbar navbar-expand-lg navbar-theme navbar-double navbar-top-new">
+        <!-- Navigation bar content here, with updated links -->
+    </nav>
+    <div class="color-overlay">
+        <div class="header" id="header-pjs" style="opacity: 0.6; z-index: 1"></div>
+    </div>
+    <div class="logo-ds-flex">
+        <div class="status-box-container">
+            <div class="status-text" onclick="copyToClipboard('#ip')">
+                <!-- Status box content with EonVerse details -->
             </div>
-            <div class="feature-box">
-                <p class="glow-text">Regular Events</p>
-                <p>Join our exciting events and win amazing rewards!</p>
+        </div>
+        <div class="discord-widget">
+            <a href="https://dsc.gg/eonverse" target="_blank">
+                <button class="discord-button">Join our Discord!</button>
+            </a>
+        </div>
+        <div class="container">
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="feature-text">
+                        Engaging Gameplay
+                    </div>
+                </div>
+                <!-- Add other features similarly -->
             </div>
-            <div class="feature-box">
-                <p class="glow-text">Staff Online</p>
-                <p>Our friendly staff members are here to assist you!</p>
-            </div>
-        </section>
-        
-        <section class="registration-form">
-            <!-- Your registration form content -->
-        </section>
-    </main>
-
-    <footer>
-        <!-- Your footer content -->
-    </footer>
-    
-    <button class="discord-button">Join our Discord</button>
-
-    <!-- Your scripts -->
-    <script src="scripts.js"></script>
-    <script>
-        document.querySelector('.discord-button').addEventListener('click', function() {
-            window.location.href = 'https://dsc.gg/eonverse';
-        });
-    </script>
-</div>
+        </div>
+    </div>
 </body>
 </html>
